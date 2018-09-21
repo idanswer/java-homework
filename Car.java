@@ -1,27 +1,27 @@
 /*
- * Æû³µÀà
+ * æ±½è½¦ç±»
  * @author Pxy
  * version 1.0
  * */
 import java.util.*;
 public class Car {
-	public String name;//Æû³µÀàĞÍÃû
-	private double tank;//Æû³µÓÍÁ¿
-	private int oilConsumption;//Æû³µÓÍºÄ
-	/*¼ÓÓÍ
-	 * @param addtank ¼Ó¶àÉÙÓÍ
+	public String name;//æ±½è½¦ç±»å‹å
+	private double tank;//æ±½è½¦æ²¹é‡
+	private int oilConsumption;//æ±½è½¦æ²¹è€—
+	/*åŠ æ²¹
+	 * @param addtank åŠ å¤šå°‘æ²¹
 	 * */
 	public void gas(double addtank) {
 		tank=tank+addtank;
 	};
-	/*Æô¶¯³µ
-	 * @return ÓĞÓÍ¿ÉÒÔÅÜ·µ»Øture Ã»ÓĞ·µ»Øfalse
+	/*å¯åŠ¨è½¦
+	 * @return æœ‰æ²¹å¯ä»¥è·‘è¿”å›ture æ²¡æœ‰è¿”å›false
 	 * */
 	public boolean run(int tank) {
 		if(tank>=0)
 			return true;
 		else
-			System.out.println("ÓÍÁ¿ºÄ¾¡");
+			System.out.println("æ²¹é‡è€—å°½");
 			return false;
 	};
 	public Car() {}
@@ -37,43 +37,23 @@ public class Car {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//ÊÔÊÔ½¨Àà¾ÍÖ±½Óµ÷ÓÃ¹¹Ôìº¯Êı
-		//Car one=new Car("Bumblebee",20.0,1);
-		//System.out.println(one.name+" "+one.tank+" "+one.oilConsumption);
-		//ÊÔÊÔÊäÈë
 		@SuppressWarnings("resource")
 		Scanner input=new Scanner(System.in);
-		/*
+		Car[] AutoBots=new Car[5];//å»ºç«‹æ±½è½¦äººå¯¹è±¡æ•°ç»„
 		String name;
-		name =input.nextLine();
-		double oil;
-		oil=input.nextDouble();
-		int oilConsumption;
-		oilConsumption=input.nextInt();
-		Car two=new Car(name,oil,oilConsumption);
-		System.out.println(two.name+" "+two.tank+" "+two.oilConsumption);
-		*/
-		//×÷Òµ ½¨Êı×éÀà ÓÃ»§ÊäÈëÃ¿Á¾³µµÄÊôĞÔ
-		Car[] AutoBots=new Car[5];
-		String name;
-		//System.out.println("please input the same tank and oilcost");
-		//double oil;
-		//int oilConsumption;
-		//oil=input.nextDouble();
-		//oilConsumption=input.nextInt();
 		System.out.println("please input name of ever car!");
 		/*
-		 *  ÊäÈëÄÚÈİÌá¹©
-		 * Optimus Prime ÇæÌìÖù
-		 * Bumblebee ´ó»Æ·ä
-		 * Jazz ¾ôÊ¿
-		 * Ratchet ¾È»¤³µ/Á¦½İ
-		 * ronhide ÌúÆ¤
-		 * Hound Ì½³¤ 
+		 *  è¾“å…¥å†…å®¹æä¾›
+		 * Optimus Prime æ“å¤©æŸ±
+		 * Bumblebee å¤§é»„èœ‚
+		 * Jazz çˆµå£«
+		 * Ratchet æ•‘æŠ¤è½¦/åŠ›æ·
+		 * ronhide é“çš®
+		 * Hound æ¢é•¿ 
 		 */
 		for(int i=0;i<5;i++) {
 			name =input.nextLine();
-			Car temp=new Car(name);
+			Car temp=new Car(name);//æ¯æ¬¡tempèµ‹ç»™ä¸‹ä¸€ä¸ªå¯¹è±¡æ—¶ï¼Œä¹‹å‰çš„è‡ªåŠ¨é‡Šæ”¾
 			AutoBots[i]=temp;
 		}
 		System.out.println("Optimus Prime:Autobots, ROLL OUT!");
