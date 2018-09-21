@@ -1,5 +1,7 @@
-package threeclass;
-
+/*
+ * @运行游戏类
+ * @author Pxy
+ */
 public class GuessLauncher {
 
 	public static void main(String[] args) {
