@@ -1,9 +1,13 @@
-package threeclass;
+/*
+ * @运行游戏类
+ * @author Pxy
+ */
+public class GuessLauncher {
 
-public class Player {
-	public  int number;
-	public  int money=0;
-	public  void guess() {
-		number=(int) (Math.random()*10);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GaussGame game=new GaussGame();
+		game.startGame();
 	}
+
 }
