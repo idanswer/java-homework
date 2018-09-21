@@ -1,13 +1,11 @@
 /*
- * @运行游戏类
- * @author Pxy
+ *   @玩家类
+ *   @author Pxy
  */
-public class GuessLauncher {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		GaussGame game=new GaussGame();
-		game.startGame();
+public class Player {
+	public  int number;
+	public  int money=0;//初始值为0
+	public  void guess() {
+		number=(int) (Math.random()*10);//Math.random范围是[0.0,1.0)
 	}
-
 }
