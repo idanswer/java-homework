@@ -1,6 +1,6 @@
 /*
  * @author Pxy
- * @²ÂÊı×ÖÓÎÏ·Àà
+ * @çŒœæ•°å­—æ¸¸æˆç±»
  * 
  */
 package threeclass;
@@ -10,7 +10,7 @@ public class GaussGame {
 	public Player player2;
 	public Player player3;
 	/*
-	 * @¹¹Ôìº¯Êı£¬´´½¨Èı¸öÍæ¼Ò¶ÔÏó
+	 * @æ„é€ å‡½æ•°ï¼Œåˆ›å»ºä¸‰ä¸ªç©å®¶å¯¹è±¡
 	 */
 	public GaussGame() {
 		 player1=new Player();
@@ -18,11 +18,11 @@ public class GaussGame {
 		 player3=new Player();
 	}
 	public void startGame() {
-		player1.guess();//ÕâÀïÓĞ¸öbug£¬Èı¸öÍæ¼ÒµÄËæ»úÊıÖ»Éú³ÉÒ»´Î£¬·½±ãÓÎÏ·½áÊø£¬²»È»ºÜÄÑ½áÊøÓÎÏ·
+		player1.guess();//è¿™é‡Œæœ‰ä¸ªbugï¼Œä¸‰ä¸ªç©å®¶çš„éšæœºæ•°åªç”Ÿæˆä¸€æ¬¡ï¼Œæ–¹ä¾¿æ¸¸æˆç»“æŸï¼Œä¸ç„¶å¾ˆéš¾ç»“æŸæ¸¸æˆ
 		player2.guess();
 		player3.guess();
 		Scanner input=new Scanner(System.in);
-		do//Ñ­»·
+		do//å¾ªç¯
 		{
 		System.out.println("Please player1 guess one number from 1 to 9.");
 		int number1=input.nextInt();
@@ -60,32 +60,32 @@ public class GaussGame {
 			player3.money=player3.money-1;
 			System.out.println("you lose 1 rmb!");
 		}
-		}//µ±Èı¸öÍæ¼ÒË­Ó®ÁËÁ½¿éÇ®¾Í½áÊøÑ­»·
+		}//å½“ä¸‰ä¸ªç©å®¶è°èµ¢äº†ä¸¤å—é’±å°±ç»“æŸå¾ªç¯
 		while(player1.money<=1&&player2.money<=1&&player3.money<=1);
-		String temp;//·½±ãÊä³ö½á¹û£¬¼ò»¯´úÂë³¤¶È
+		String temp;//æ–¹ä¾¿è¾“å‡ºç»“æœï¼Œç®€åŒ–ä»£ç é•¿åº¦
 		if(player1.money>=0)
-			temp="Ó®ÁË";
+			temp="èµ¢äº†";
 		else
 		{
-		temp="ÊäÁË";
-		player1.money=Math.abs(player1.money);//±äÎª¸ºÊıÊ±ÒªÈ¡È¡¾ø¶ÔÖµ
+		temp="è¾“äº†";
+		player1.money=Math.abs(player1.money);//å˜ä¸ºè´Ÿæ•°æ—¶è¦å–å–ç»å¯¹å€¼
 		}
-		System.out.println("player1"+temp+player1.money+"Ôª");
+		System.out.println("player1"+temp+player1.money+"å…ƒ");
 		if(player2.money>=0)
-			temp="Ó®ÁË";
+			temp="èµ¢äº†";
 		else
 		{
-			temp="ÊäÁË";
+			temp="è¾“äº†";
 			player2.money=Math.abs(player2.money);
 		}
-		System.out.println("player2"+temp+player2.money+"Ôª");
+		System.out.println("player2"+temp+player2.money+"å…ƒ");
 		if(player3.money>=0)
-			temp="Ó®ÁË";
+			temp="èµ¢äº†";
 		else
 		{
-			temp="ÊäÁË";
+			temp="è¾“äº†";
 			player3.money=Math.abs(player3.money);
 		}
-		System.out.println("player3"+temp+player3.money+"Ôª");
+		System.out.println("player3"+temp+player3.money+"å…ƒ");
 	}
 }
